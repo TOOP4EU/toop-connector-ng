@@ -32,10 +32,9 @@
   <url>https://github.com/toop4eu/toop-connector-ng/tc-main</url>
   <inceptionYear>2020</inceptionYear>
   
-  <licenses>
+<licenses>
     <license>
-      <name>Apache 2</name>
-      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <name>EUPL 1.2</name>
       <distribution>repo</distribution>
     </license>
   </licenses>
