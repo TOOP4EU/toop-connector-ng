@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    This work is protected under copyrights held by the members of the
+    TOOP Project Consortium as indicated at
+    http://wiki.ds.unipi.gr/display/TOOP/Contributors
+    (c) 2018-2021. All rights reserved.
+
+    This work is licensed under the EUPL 1.2.
+
+     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+    Licensed under the EUPL, Version 1.2 or – as soon they will be approved
+    by the European Commission - subsequent versions of the EUPL
+    (the "Licence");
+    You may not use this work except in compliance with the Licence.
+    You may obtain a copy of the Licence at:
+
+            https://joinup.ec.europa.eu/software/page/eupl
+
+-->
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>eu.toop</groupId>
+    <artifactId>tc-parent-pom</artifactId>
+    <version>2.1.2-SNAPSHOT</version>
+  </parent>
+  <artifactId>tc-web-api</artifactId>
+  <packaging>bundle</packaging>
+  <name>tc-web-api</name>
+  <description>Contains the TOOP Connector REST API implementations</description>
+  <url>https://github.com/toop4eu/toop-connector-ng/tc-web-api</url>
+  <inceptionYear>2020</inceptionYear>
+  
+  <licenses>
+    <license>
+      <name>Apache 2</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+  
+  <organization>
+    <name>toop.eu</name>
+    <url>http://www.toop.eu</url>
+  </organization>
+  
+  <developers>
+    <developer>
+      <id>philip</id>
+      <name>Philip Helger</name>
+      <email>ph(at)helger.com</email>
+    </developer>
+  </developers>
+  
+  <dependencies>
+    <dependency>
+      <groupId>com.helger.photon</groupId>
+      <artifactId>ph-oton-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>eu.toop</groupId>
+      <artifactId>tc-api</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>eu.toop</groupId>
+      <artifactId>tc-main</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>com.helger.phive</groupId>
+      <artifactId>phive-json</artifactId>
+    </dependency>
+    <!-- Default MEM module -->
+    <dependency>
+      <groupId>eu.toop</groupId>
+      <artifactId>tc-mem-external</artifactId>
+    </dependency>
+    <!-- ph-as4 MEM module -->
+    <dependency>
+      <groupId>eu.toop</groupId>
+      <artifactId>tc-mem-phase4</artifactId>
+    </dependency>
+    <!-- For the truststore -->
+    <dependency>
+      <groupId>eu.toop</groupId>
+      <artifactId>toop-commons</artifactId>
+    </dependency>
+    
+    <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>javax.servlet-api</artifactId>
+      <scope>provided</scope>
+    </dependency>
+    
+    <!-- Test only -->
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+  
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.felix</groupId>
+        <artifactId>maven-bundle-plugin</artifactId>
+        <configuration>
+          <instructions>
+            <Automatic-Module-Name>eu.toop.connector.webapi</Automatic-Module-Name>
+            <Export-Package>eu.toop.connector.webapi.*</Export-Package>
+            <Import-Package>!javax.annotation.*,*</Import-Package>
+          </instructions>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>

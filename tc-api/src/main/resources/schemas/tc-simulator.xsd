@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    This work is protected under copyrights held by the members of the
+    TOOP Project Consortium as indicated at
+    http://wiki.ds.unipi.gr/display/TOOP/Contributors
+    (c) 2018-2021. All rights reserved.
+
+    This work is licensed under the EUPL 1.2.
+
+     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+    Licensed under the EUPL, Version 1.2 or – as soon they will be approved
+    by the European Commission - subsequent versions of the EUPL
+    (the "Licence");
+    You may not use this work except in compliance with the Licence.
+    You may obtain a copy of the Licence at:
+
+            https://joinup.ec.europa.eu/software/page/eupl
+
+-->
+<xs:schema attributeFormDefault="unqualified" 
+           elementFormDefault="qualified" 
+           xmlns:xs="http://www.w3.org/2001/XMLSchema" 
+           targetNamespace="urn:eu.toop/toop-simulator-ng/2020/05/discovery"
+           xmlns="urn:eu.toop/toop-simulator-ng/2020/05/discovery"
+           xmlns:bdxr="http://docs.oasis-open.org/bdxr/ns/SMP/2016/05">
+           
+  <xs:import namespace="http://docs.oasis-open.org/bdxr/ns/SMP/2016/05" />
+  
+  <xs:complexType name="CountryAwareServiceMetadataType">
+    <xs:sequence>
+      <xs:element ref="bdxr:ServiceMetadata" minOccurs="0" maxOccurs="unbounded" />
+    </xs:sequence>
+    <xs:attribute name="countryCode" type="xs:string" use="required"/>
+  </xs:complexType>
+
+
+  <xs:complexType name="CountryAwareServiceMetadataListType">
+    <xs:sequence>
+      <xs:element name="CountryAwareServiceMetadata" type="CountryAwareServiceMetadataType" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  
+  <xs:element name="CountryAwareServiceMetadataList" type="CountryAwareServiceMetadataListType"/>
+
+</xs:schema>

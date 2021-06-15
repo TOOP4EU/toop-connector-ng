@@ -1,0 +1,13 @@
+{
+toop: {
+  dsd: {
+    service: {
+      baseurl: "http://directory.central.toop/pd"
+    }
+  },
+  r2d2: {
+    usedns: false
+  }
+}
+
+}

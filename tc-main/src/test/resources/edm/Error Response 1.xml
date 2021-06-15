@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    This work is protected under copyrights held by the members of the
+    TOOP Project Consortium as indicated at
+    http://wiki.ds.unipi.gr/display/TOOP/Contributors
+    (c) 2018-2021. All rights reserved.
+
+    This work is licensed under the EUPL 1.2.
+
+     = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = =
+
+    Licensed under the EUPL, Version 1.2 or – as soon they will be approved
+    by the European Commission - subsequent versions of the EUPL
+    (the "Licence");
+    You may not use this work except in compliance with the Licence.
+    You may obtain a copy of the Licence at:
+
+            https://joinup.ec.europa.eu/software/page/eupl
+
+-->
+<query:QueryResponse xmlns:lcm="urn:oasis:names:tc:ebxml-regrep:xsd:lcm:4.0"
+  xmlns:spi="urn:oasis:names:tc:ebxml-regrep:xsd:spi:4.0" 
+  xmlns:rs="urn:oasis:names:tc:ebxml-regrep:xsd:rs:4.0"
+  xmlns:wsa="http://www.w3.org/2005/08/addressing" 
+  xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:query="urn:oasis:names:tc:ebxml-regrep:xsd:query:4.0" 
+  xmlns:rim="urn:oasis:names:tc:ebxml-regrep:xsd:rim:4.0"
+  status="urn:oasis:names:tc:ebxml-regrep:ResponseStatusType:Failure" 
+  requestId="c4369c4d-740e-4b64-80f0-7b209a66d629">
+  <rim:Slot name="SpecificationIdentifier">
+    <rim:SlotValue xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="rim:StringValueType">
+      <rim:Value>toop-edm:v2.1</rim:Value>
+    </rim:SlotValue>
+  </rim:Slot>
+  <rs:Exception xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="rs:ObjectNotFoundExceptionType" code="GEN" message="What went wrong: OBJECT_NOT_FOUND" severity="FAILURE">
+    <rim:Slot name="Timestamp">
+      <rim:SlotValue xsi:type="rim:DateTimeValueType">
+        <rim:Value>2020-05-19T07:59:38.252</rim:Value>
+      </rim:SlotValue>
+    </rim:Slot>
+    <rim:Slot name="ErrorOrigin">
+      <rim:SlotValue xsi:type="rim:StringValueType">
+        <rim:Value>ResponseReception</rim:Value>
+      </rim:SlotValue>
+    </rim:Slot>
+  </rs:Exception>
+  <rs:Exception xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="rs:TimeoutExceptionType" code="GEN" message="What went wrong: TIMEOUT" severity="FAILURE">
+    <rim:Slot name="Timestamp">
+      <rim:SlotValue xsi:type="rim:DateTimeValueType">
+        <rim:Value>2020-05-19T07:59:38.262</rim:Value>
+      </rim:SlotValue>
+    </rim:Slot>
+    <rim:Slot name="ErrorOrigin">
+      <rim:SlotValue xsi:type="rim:StringValueType">
+        <rim:Value>ResponseReception</rim:Value>
+      </rim:SlotValue>
+    </rim:Slot>
+  </rs:Exception>
+</query:QueryResponse>
